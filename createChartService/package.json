@@ -1,0 +1,27 @@
+{
+  "name": "createchartservice",
+  "version": "1.0.0",
+  "description": "(description)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/ntua/SaaS23-22.git)"
+  },
+  "author": "el19181, el19032",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "axios": "^0.21.1",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.11.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^5.12.11"
+  }
+}

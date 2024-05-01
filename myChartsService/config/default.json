@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://fotini:despina@cluster0.cjjp0y8.mongodb.net/myCharts?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
+}

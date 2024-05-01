@@ -1,0 +1,74 @@
+version: '3'
+services:
+  accountsservice:
+    build: ./accountsService
+    ports:
+      - "0.0.0.0:4000:4000"
+    volumes:
+      - ./eventBusService:/app/eventBusService
+    depends_on:
+      - rabbitmq
+      - eventbusservice
+
+  createchartservice:
+    build: ./createChartService
+    ports:
+      - "0.0.0.0:4001:4001"
+    volumes:
+      - ./eventBusService:/app/eventBusService
+    depends_on:
+      - rabbitmq
+      - eventbusservice
+
+  creditsservice:
+    build: ./creditsService
+    ports:
+      - "0.0.0.0:4002:4002"
+    volumes:
+      - ./eventBusService:/app/eventBusService
+    depends_on:
+      - rabbitmq
+      - eventbusservice
+
+  managecreditsservice:
+    build: ./manageCreditsService
+    ports:
+      - "0.0.0.0:4004:4004"
+    volumes:
+      - ./eventBusService:/app/eventBusService
+    depends_on:
+      - rabbitmq
+      - eventbusservice
+
+  mychartsservice:
+    build: ./myChartsService
+    ports:
+      - "0.0.0.0:4005:4005"
+    volumes:
+      - ./eventBusService:/app/eventBusService
+    depends_on:
+      - rabbitmq
+      - eventbusservice
+
+  client2:
+    build: ./client2
+    ports:
+      - "0.0.0.0:3000:3000"
+
+  eventbusservice:
+    build: ./eventBusService
+    volumes:
+      - ./eventBusService:/app/eventBusService
+    depends_on:
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: [ "CMD", "rabbitmqctl", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3

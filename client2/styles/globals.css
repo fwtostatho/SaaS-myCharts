@@ -1,0 +1,153 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: sans-serif;
+  padding: 10px 20px;
+  line-height: 1.6;
+}
+
+.header-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.header-nav a {
+  color: #a7a7a7;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.header-nav a.active {
+  color: #222;
+}
+
+.site-footer {
+  margin-top: 1rem;
+  border-top: 1px dotted #adadad;
+  text-align: center;
+  color: #999;
+  font-size: 0.75rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 70vh;
+}
+.center-buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 70vh;
+}
+
+.center-buttons button {
+  padding: 20px 40px;
+  margin-bottom: 10px;
+  align-items: center;
+  margin-inline: 60px;
+  background-color: #0800ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.center img {
+  margin-bottom: 20px;
+}
+
+.center button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #0800ff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.center button:last-child {
+  margin-bottom: 0;
+}
+
+.banner {
+  background-color: #007bff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.banner-title {
+  margin: 0;
+}
+
+.sign-out-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.button-container button {
+  flex: 1;
+}
+
+.dashboard-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #00a4fd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 16px;
+  color: #666;
+}
+
+.button {
+  background-color: #00a4fd;
+  color: white;
+  padding: 1px 2px;
+  margin: 3px;
+}
+
+/* Add any other styles you want for the image */
